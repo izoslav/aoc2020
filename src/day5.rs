@@ -42,17 +42,10 @@ fn decode_seat(seat: &str) -> (usize, usize) {
 
 fn binary_decode(string: &str) -> usize {
   let binary = string
-    .chars()
-    .map(|symbol| {
-      match symbol {
-        'F' => { '0' }
-        'L' => { '0' }
-        'B' => { '1' }
-        'R' => { '1' }
-        _ => panic!("WTF")
-      }
-    })
-    .collect::<String>();
+    .replace("F", "0")
+    .replace("L", "0")
+    .replace("B", "1")
+    .replace("R", "1");
 
     usize::from_str_radix(&binary, 2).unwrap()
 }
