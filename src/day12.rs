@@ -50,7 +50,7 @@ fn execute_action(action: Action, state: State) -> State {
 }
 
 fn forward(action: Action, state: State) -> State {
-  let Action {instruction, value} = action;
+  let Action {instruction: _, value} = action;
   let State {x, y, direction} = state;
 
   match direction {

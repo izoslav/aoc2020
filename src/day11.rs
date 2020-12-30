@@ -12,7 +12,6 @@ pub fn run() {
 fn simulate(seats: &Vec<Vec<char>>, num: usize, adjacent: bool) -> usize {
   let mut seats = seats.clone();
   let mut change = true;
-  let mut steps = 3;
 
   while change {
     let prev = seats.clone();
