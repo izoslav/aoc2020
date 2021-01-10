@@ -103,7 +103,7 @@ fn load(filepath: &str) -> (Vec<String>, Array2<usize>) {
 
   let rules: Vec<String> = contents
     .trim()
-    .split("\r\n")
+    .split("\n")
     .map(|line| line.to_string())
     .collect();
 

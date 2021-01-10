@@ -114,7 +114,7 @@ fn load(filepath: &str) -> Vec<Passport> {
 
   contents
     .trim()
-    .split("\r\n\r\n")
+    .split("\n\n")
     .map(|entry| {
       entry
         .split_whitespace()

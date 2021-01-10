@@ -54,7 +54,7 @@ fn load(filepath: &str) -> Vec<Vec<String>> {
 
   contents
     .trim()
-    .split("\r\n\r\n")
+    .split("\n\n")
     .map(|entry| {
       entry
         .split_whitespace()

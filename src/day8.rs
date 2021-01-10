@@ -63,7 +63,7 @@ fn load(filepath: &str) -> Vec<(String, i32)> {
 
   contents
     .trim()
-    .split("\r\n")
+    .split("\n")
     .map(|entry| {
       (entry[..3].to_string(), entry[4..].parse::<i32>().unwrap())
     })
